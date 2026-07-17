@@ -25,7 +25,7 @@ search:
   safe_search: 0
   autocomplete: "google"
   autocomplete_min: 2
-  default_lang: "fr-FR"
+  default_lang: "fr"
   max_page: 0
   formats:
     - html
