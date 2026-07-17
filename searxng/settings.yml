@@ -11,22 +11,25 @@ use_default_settings:
       - stackoverflow
       - google news
       - bing news
-
+      - google images
+      - bing images
+      - duckduckgo images
+      - openstreetmap
+      - apple maps
 general:
   debug: false
   instance_name: "OSRS SearXNG"
   contact_url: false
   enable_metrics: false
-
 search:
   safe_search: 0
-  autocomplete: ""
-  default_lang: "en"
+  autocomplete: "google"
+  autocomplete_min: 2
+  default_lang: "fr-FR"
   max_page: 0
   formats:
     - html
     - json
-
 server:
   secret_key: "osrs-searxng-secret-key-change-in-production"
   limiter: false
@@ -35,17 +38,15 @@ server:
   method: "GET"
   bind_address: "0.0.0.0"
   port: 8080
-
 ui:
   static_use_hash: true
-  default_locale: "en"
+  default_locale: "fr"
   query_in_title: false
   infinite_scroll: false
   center_alignment: false
   default_theme: simple
   theme_args:
     simple_style: auto
-
 plugins:
   searx.plugins.hash_plugin.SXNGPlugin:
     active: true
@@ -53,7 +54,6 @@ plugins:
     active: true
   searx.plugins.tracker_url_remover.SXNGPlugin:
     active: true
-
 engines:
   - name: google
     disabled: false
@@ -85,5 +85,18 @@ engines:
   - name: stackoverflow
     disabled: false
     weight: 0.9
-
-
+  - name: google images
+    disabled: false
+    weight: 1.0
+  - name: bing images
+    disabled: false
+    weight: 0.7
+  - name: duckduckgo images
+    disabled: false
+    weight: 0.6
+  - name: openstreetmap
+    disabled: false
+    weight: 1.0
+  - name: apple maps
+    disabled: false
+    weight: 0.8
