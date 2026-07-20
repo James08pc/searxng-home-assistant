@@ -16,6 +16,7 @@ use_default_settings:
       - duckduckgo images
       - openstreetmap
       - apple maps
+      - google maps
 general:
   debug: false
   instance_name: "OSRS SearXNG"
