@@ -16,7 +16,7 @@ use_default_settings:
       - duckduckgo images
       - openstreetmap
       - apple maps
-      - google maps
+      - photon
       - qwant
       - startpage
       - mojeek
@@ -26,7 +26,6 @@ use_default_settings:
       - vimeo
       - google scholar
       - arxiv
-      - openstreetmap
       - google videos
       - bing videos
       - duckduckgo videos
@@ -153,7 +152,7 @@ engines:
   - name: apple maps
     disabled: false
     weight: 0.8
-  - name: google maps
+  - name: photon
     disabled: false
     weight: 0.9
   # --- Développement / IT ---
