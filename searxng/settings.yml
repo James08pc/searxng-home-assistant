@@ -41,7 +41,7 @@ general:
   contact_url: false
   enable_metrics: false
 search:
-  safe_search: 0
+  safe_search: 2
   autocomplete: "google"
   autocomplete_min: 2
   default_lang: "auto"
@@ -66,6 +66,9 @@ ui:
   default_theme: simple
   theme_args:
     simple_style: auto
+preferences:
+  lock:
+    - safesearch
 plugins:
   searx.plugins.hash_plugin.SXNGPlugin:
     active: true
