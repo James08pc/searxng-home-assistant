@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.17
+
+- Ajout du filtre parental
+
 ## 1.0.16
 
 - Ajout du moteur de cartes **Photon** (géocodage / recherche d'adresses basé sur OpenStreetMap)
