@@ -17,6 +17,25 @@ use_default_settings:
       - openstreetmap
       - apple maps
       - google maps
+      - qwant
+      - startpage
+      - mojeek
+      - wikidata
+      - wiktionary
+      - youtube
+      - vimeo
+      - google scholar
+      - arxiv
+      - openstreetmap
+      - google videos
+      - bing videos
+      - duckduckgo videos
+      - gitlab
+      - pypi
+      - npm
+      - docker hub
+      - archlinux
+      - mdn
 general:
   debug: false
   instance_name: "OSRS SearXNG"
@@ -56,10 +75,8 @@ plugins:
   searx.plugins.tracker_url_remover.SXNGPlugin:
     active: true
 engines:
+  # --- Recherche générale ---
   - name: google
-    disabled: false
-    weight: 1.0
-  - name: google news
     disabled: false
     weight: 1.0
   - name: duckduckgo
@@ -71,21 +88,39 @@ engines:
   - name: bing
     disabled: false
     weight: 0.5
+  - name: qwant
+    disabled: false
+    weight: 0.7
+  - name: startpage
+    disabled: false
+    weight: 0.7
+  - name: mojeek
+    disabled: false
+    weight: 0.5
+  # --- Actualités ---
+  - name: google news
+    disabled: false
+    weight: 1.0
   - name: bing news
     disabled: false
     weight: 0.8
+  # --- Savoir / références ---
   - name: wikipedia
     disabled: false
     weight: 1.0
-  - name: reddit
-    disabled: false
-    weight: 0.7
-  - name: github
-    disabled: false
-    weight: 0.8
-  - name: stackoverflow
+  - name: wikidata
     disabled: false
     weight: 0.9
+  - name: wiktionary
+    disabled: false
+    weight: 0.7
+  - name: google scholar
+    disabled: false
+    weight: 0.8
+  - name: arxiv
+    disabled: false
+    weight: 0.7
+  # --- Images ---
   - name: google images
     disabled: false
     weight: 1.0
@@ -95,9 +130,58 @@ engines:
   - name: duckduckgo images
     disabled: false
     weight: 0.6
+  # --- Vidéos ---
+  - name: youtube
+    disabled: false
+    weight: 1.0
+  - name: vimeo
+    disabled: false
+    weight: 0.6
+  - name: google videos
+    disabled: false
+    weight: 0.8
+  - name: bing videos
+    disabled: false
+    weight: 0.6
+  - name: duckduckgo videos
+    disabled: false
+    weight: 0.6
+  # --- Cartes ---
   - name: openstreetmap
     disabled: false
     weight: 1.0
   - name: apple maps
     disabled: false
     weight: 0.8
+  - name: google maps
+    disabled: false
+    weight: 0.9
+  # --- Développement / IT ---
+  - name: github
+    disabled: false
+    weight: 0.8
+  - name: gitlab
+    disabled: false
+    weight: 0.6
+  - name: stackoverflow
+    disabled: false
+    weight: 0.9
+  - name: pypi
+    disabled: false
+    weight: 0.6
+  - name: npm
+    disabled: false
+    weight: 0.6
+  - name: docker hub
+    disabled: false
+    weight: 0.6
+  - name: archlinux
+    disabled: false
+    weight: 0.5
+  - name: mdn
+    disabled: false
+    weight: 0.7
+  # --- Social ---
+  - name: reddit
+    disabled: false
+    weight: 0.7
