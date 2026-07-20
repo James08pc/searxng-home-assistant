@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.14"
+version: "1.0.15"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
@@ -20,26 +20,84 @@ ports_description:
 webui: "http://[HOST]:[PORT:8080]"
 options:
   safe_search: 0
+  # Recherche générale
   enable_google: true
   enable_duckduckgo: true
   enable_brave: true
   enable_bing: true
+  enable_qwant: true
+  enable_startpage: true
+  enable_mojeek: true
+  # Actualités
+  enable_google_news: true
+  enable_bing_news: true
+  # Savoir / références
   enable_wikipedia: true
-  enable_reddit: true
+  enable_wikidata: true
+  enable_wiktionary: true
+  enable_google_scholar: true
+  enable_arxiv: true
+  # Images
+  enable_google_images: true
+  enable_bing_images: true
+  enable_duckduckgo_images: true
+  # Vidéos
+  enable_youtube: true
+  enable_vimeo: true
+  enable_google_videos: true
+  enable_bing_videos: true
+  enable_duckduckgo_videos: true
+  # Cartes
+  enable_openstreetmap: true
+  enable_apple_maps: true
+  enable_google_maps: true
+  # Développement / IT
   enable_github: true
+  enable_gitlab: true
   enable_stackoverflow: true
+  enable_pypi: true
+  enable_npm: true
+  enable_docker_hub: true
+  enable_archlinux: true
+  enable_mdn: true
+  # Social
+  enable_reddit: true
 schema:
   safe_search: list(0|1|2)
   enable_google: bool
   enable_duckduckgo: bool
   enable_brave: bool
   enable_bing: bool
+  enable_qwant: bool
+  enable_startpage: bool
+  enable_mojeek: bool
+  enable_google_news: bool
+  enable_bing_news: bool
   enable_wikipedia: bool
-  enable_reddit: bool
+  enable_wikidata: bool
+  enable_wiktionary: bool
+  enable_google_scholar: bool
+  enable_arxiv: bool
+  enable_google_images: bool
+  enable_bing_images: bool
+  enable_duckduckgo_images: bool
+  enable_youtube: bool
+  enable_vimeo: bool
+  enable_google_videos: bool
+  enable_bing_videos: bool
+  enable_duckduckgo_videos: bool
+  enable_openstreetmap: bool
+  enable_apple_maps: bool
+  enable_google_maps: bool
   enable_github: bool
+  enable_gitlab: bool
   enable_stackoverflow: bool
+  enable_pypi: bool
+  enable_npm: bool
+  enable_docker_hub: bool
+  enable_archlinux: bool
+  enable_mdn: bool
+  enable_reddit: bool
 environment:
   SEARXNG_BASE_URL: "http://homeassistant.local:8080/"
   SEARXNG_SETTINGS_PATH: "/etc/searxng/settings.yml"
-
-
