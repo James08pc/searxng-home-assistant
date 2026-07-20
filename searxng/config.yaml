@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.15"
+version: "1.0.16"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
@@ -50,7 +50,7 @@ options:
   # Cartes
   enable_openstreetmap: true
   enable_apple_maps: true
-  enable_google_maps: true
+  enable_photon: true
   # Développement / IT
   enable_github: true
   enable_gitlab: true
@@ -88,7 +88,7 @@ schema:
   enable_duckduckgo_videos: bool
   enable_openstreetmap: bool
   enable_apple_maps: bool
-  enable_google_maps: bool
+  enable_photon: bool
   enable_github: bool
   enable_gitlab: bool
   enable_stackoverflow: bool
