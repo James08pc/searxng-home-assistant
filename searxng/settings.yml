@@ -1,45 +1,57 @@
 use_default_settings:
   engines:
     keep_only:
+      # Recherche générale
       - google
       - duckduckgo
       - brave
       - bing
-      - wikipedia
-      - reddit
-      - github
-      - stackoverflow
-      - google news
-      - bing news
-      - google images
-      - bing images
-      - duckduckgo images
-      - openstreetmap
-      - apple maps
-      - photon
       - qwant
       - startpage
       - mojeek
+      # Actualités
+      - google news
+      - bing news
+      # Savoir / références
+      - wikipedia
       - wikidata
       - wiktionary
-      - youtube
-      - vimeo
       - google scholar
       - arxiv
+      # Images
+      - google images
+      - bing images
+      - duckduckgo images
+      # Vidéos
+      - youtube
+      - vimeo
       - google videos
       - bing videos
       - duckduckgo videos
+      # Cartes
+      - openstreetmap
+      - apple maps
+      - photon
+      # Applications
+      - google play apps
+      # Développement / IT
+      - github
       - gitlab
+      - stackoverflow
       - pypi
       - npm
       - docker hub
       - archlinux
       - mdn
+      # Social
+      - reddit
+
 general:
   debug: false
   instance_name: "OSRS SearXNG"
   contact_url: false
   enable_metrics: false
+
 search:
   safe_search: 2
   autocomplete: "google"
@@ -49,6 +61,7 @@ search:
   formats:
     - html
     - json
+
 server:
   secret_key: "osrs-searxng-secret-key-change-in-production"
   limiter: false
@@ -57,6 +70,7 @@ server:
   method: "GET"
   bind_address: "0.0.0.0"
   port: 8080
+
 ui:
   static_use_hash: true
   default_locale: "fr"
@@ -66,9 +80,11 @@ ui:
   default_theme: simple
   theme_args:
     simple_style: auto
+
 preferences:
   lock:
     - safesearch
+
 plugins:
   searx.plugins.hash_plugin.SXNGPlugin:
     active: true
@@ -76,6 +92,7 @@ plugins:
     active: true
   searx.plugins.tracker_url_remover.SXNGPlugin:
     active: true
+
 engines:
   # --- Recherche générale ---
   - name: google
@@ -99,6 +116,7 @@ engines:
   - name: mojeek
     disabled: false
     weight: 0.5
+
   # --- Actualités ---
   - name: google news
     disabled: false
@@ -106,6 +124,7 @@ engines:
   - name: bing news
     disabled: false
     weight: 0.8
+
   # --- Savoir / références ---
   - name: wikipedia
     disabled: false
@@ -122,6 +141,7 @@ engines:
   - name: arxiv
     disabled: false
     weight: 0.7
+
   # --- Images ---
   - name: google images
     disabled: false
@@ -132,6 +152,7 @@ engines:
   - name: duckduckgo images
     disabled: false
     weight: 0.6
+
   # --- Vidéos ---
   - name: youtube
     disabled: false
@@ -148,6 +169,7 @@ engines:
   - name: duckduckgo videos
     disabled: false
     weight: 0.6
+
   # --- Cartes ---
   - name: openstreetmap
     disabled: false
@@ -158,6 +180,12 @@ engines:
   - name: photon
     disabled: false
     weight: 0.9
+
+  # --- Applications ---
+  - name: google play apps
+    disabled: false
+    weight: 0.6
+
   # --- Développement / IT ---
   - name: github
     disabled: false
@@ -183,6 +211,7 @@ engines:
   - name: mdn
     disabled: false
     weight: 0.7
+
   # --- Social ---
   - name: reddit
     disabled: false
