@@ -99,5 +99,5 @@ schema:
   enable_mdn: bool
   enable_reddit: bool
 environment:
-  SEARXNG_BASE_URL: "http://homeassistant.local:8080/"
+  SEARXNG_BASE_URL: "https://brasseurmisset08.duckdns.org/"
   SEARXNG_SETTINGS_PATH: "/etc/searxng/settings.yml"
