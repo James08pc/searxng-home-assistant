@@ -63,7 +63,9 @@ search:
     - json
 
 server:
-  secret_key: "osrs-searxng-secret-key-change-in-production"
+  # URL publique en HTTPS (remplace par ton domaine)
+  base_url: "https://monsearx.duckdns.org/"
+  secret_key: "df8f56769a667c1dab6fa74b0381ea736d31a65046fc4d8923310108a72e52c7"
   limiter: false
   image_proxy: true
   http_protocol_version: "1.1"
