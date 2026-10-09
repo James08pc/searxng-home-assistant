@@ -64,7 +64,7 @@ search:
 
 server:
   # URL publique en HTTPS (remplace par ton domaine)
-  base_url: "https://monsearx.duckdns.org/"
+  base_url: "https://brasseurmisset08.duckdns.org/"
   secret_key: "df8f56769a667c1dab6fa74b0381ea736d31a65046fc4d8923310108a72e52c7"
   limiter: false
   image_proxy: true
