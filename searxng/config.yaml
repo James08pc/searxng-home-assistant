@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.18"
+version: "1.0.19"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
@@ -16,7 +16,7 @@ host_network: true
 ports:
   8080/tcp: 8080
 ports_description:
-  8080/tcp: SearXNG web interface and API
+  8080/tcp: SearXNG web interface and API (HTTP, derrière le reverse proxy HTTPS)
 webui: "http://[HOST]:[PORT:8080]"
 options:
   safe_search: 0
@@ -51,6 +51,8 @@ options:
   enable_openstreetmap: true
   enable_apple_maps: true
   enable_photon: true
+  # Applications
+  enable_google_play_apps: true
   # Développement / IT
   enable_github: true
   enable_gitlab: true
@@ -89,6 +91,7 @@ schema:
   enable_openstreetmap: bool
   enable_apple_maps: bool
   enable_photon: bool
+  enable_google_play_apps: bool
   enable_github: bool
   enable_gitlab: bool
   enable_stackoverflow: bool
@@ -99,5 +102,6 @@ schema:
   enable_mdn: bool
   enable_reddit: bool
 environment:
-  SEARXNG_BASE_URL: "https://brasseurmisset08.duckdns.org/"
+  # URL publique en HTTPS (remplace par ton domaine)
+  SEARXNG_BASE_URL: "https://monsearx.duckdns.org/"
   SEARXNG_SETTINGS_PATH: "/etc/searxng/settings.yml"
