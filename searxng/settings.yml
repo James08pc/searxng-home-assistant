@@ -41,10 +41,7 @@ use_default_settings:
       - pypi
       - npm
       - docker hub
-      - archlinux
       - mdn
-      # Social
-      - reddit
 
 general:
   debug: false
@@ -63,8 +60,8 @@ search:
     - json
 
 server:
-  # URL publique en HTTPS (remplace par ton domaine)
   base_url: "https://brasseurmisset08.duckdns.org/"
+  # Génère une valeur avec : openssl rand -hex 32
   secret_key: "df8f56769a667c1dab6fa74b0381ea736d31a65046fc4d8923310108a72e52c7"
   limiter: false
   image_proxy: true
@@ -72,6 +69,11 @@ server:
   method: "GET"
   bind_address: "0.0.0.0"
   port: 8080
+
+outgoing:
+  # Plus de marge si le DNS ou le réseau est lent
+  request_timeout: 5.0
+  max_request_timeout: 10.0
 
 ui:
   static_use_hash: true
@@ -207,14 +209,6 @@ engines:
   - name: docker hub
     disabled: false
     weight: 0.6
-  - name: archlinux
-    disabled: false
-    weight: 0.5
   - name: mdn
-    disabled: false
-    weight: 0.7
-
-  # --- Social ---
-  - name: reddit
     disabled: false
     weight: 0.7
