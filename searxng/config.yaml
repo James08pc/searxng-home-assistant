@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.19"
+version: "1.0.20"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/searxng/searxng"
@@ -60,10 +60,11 @@ options:
   enable_pypi: true
   enable_npm: true
   enable_docker_hub: true
-  enable_archlinux: true
   enable_mdn: true
-  # Social
-  enable_reddit: true
+  # Désactivés : ces moteurs n'existent plus dans les réglages par défaut de SearXNG
+  # (erreur "engine field is missing" au démarrage)
+  enable_archlinux: false
+  enable_reddit: false
 schema:
   safe_search: list(0|1|2)
   enable_google: bool
@@ -102,6 +103,6 @@ schema:
   enable_mdn: bool
   enable_reddit: bool
 environment:
-  # URL publique en HTTPS (remplace par ton domaine)
-  SEARXNG_BASE_URL: "https://monsearx.duckdns.org/"
+  # URL publique en HTTPS (via le reverse proxy, port 8124)
+  SEARXNG_BASE_URL: "https://searx.brasseurmisset08.duckdns.org:8124/"
   SEARXNG_SETTINGS_PATH: "/etc/searxng/settings.yml"
