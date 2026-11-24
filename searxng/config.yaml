@@ -2,7 +2,7 @@ name: "SearXNG Search Engine"
 version: "1.0.20"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
-url: "https://github.com/searxng/searxng"
+url: "https://github.com/James08pc/searxng-home-assistant"
 arch:
   - aarch64
   - amd64
