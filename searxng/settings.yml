@@ -60,7 +60,7 @@ search:
     - json
 
 server:
-  base_url: "https://brasseurmisset08.duckdns.org/"
+  base_url: "https://searx.brasseurmisset08.duckdns.org:8124/"
   # Génère une valeur avec : openssl rand -hex 32
   secret_key: "df8f56769a667c1dab6fa74b0381ea736d31a65046fc4d8923310108a72e52c7"
   limiter: false
