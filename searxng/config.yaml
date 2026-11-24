@@ -17,7 +17,7 @@ ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: SearXNG web interface and API (HTTP, derrière le reverse proxy HTTPS)
-webui: "https://searx.brasseurmisset08.duckdns.org:8124/"
+webui: "http://[HOST]:[PORT:8080]"
 options:
   safe_search: 0
   # Recherche générale
