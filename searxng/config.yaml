@@ -1,5 +1,5 @@
 name: "SearXNG Search Engine"
-version: "1.0.20"
+version: "1.0.21"
 slug: "searxng"
 description: "Privacy-respecting metasearch engine for Home Assistant"
 url: "https://github.com/James08pc/searxng-home-assistant"
@@ -17,7 +17,7 @@ ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: SearXNG web interface and API (HTTP, derrière le reverse proxy HTTPS)
-webui: "http://searx.brasseurmisset08.duckdns.org:8124"
+webui: "http://[HOST]:[PORT:8080]"
 options:
   safe_search: 0
   # Recherche générale
